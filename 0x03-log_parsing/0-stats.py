@@ -23,13 +23,13 @@ count = 0
 
 if __name__ == "__main__":
     try:
-        for l in sys.stdin:
+        for line in sys.stdin:
             try:
-                status_code = l.split()[-2]
+                status_code = line.split()[-2]
                 if status_code in codes_count.keys():
                     codes_count[status_code] += 1
                 # Grab file size
-                file_size = int(l.split()[-1])
+                file_size = int(line.split()[-1])
                 file_size_total += file_size
             except Exception:
                 pass
