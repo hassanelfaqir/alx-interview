@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """Module defining isWinner function."""
 
+
 def isWinner(x, nums):
     """Function to get who has won in prime game"""
     mariaWinsCount = 0
     benWinsCount = 0
 
-    for n in nums:
-        roundsSet = list(range(1, n + 1))
-        primesSet = primes_in_range(1, n)
+    for num in nums:
+        roundsSet = list(range(1, num + 1))
+        primesSet = primes_in_range(1, num)
 
         if not primesSet:
             benWinsCount += 1
@@ -44,8 +45,8 @@ def is_prime(n):
     """Returns True if n is prime, else False."""
     if n < 2:
         return False
-    for j in range(2, int(n ** 0.5) + 1):
-        if n % j == 0:
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
             return False
     return True
 
